@@ -10,7 +10,6 @@ Users can like or dislike the profiles of other users.
 Findrr also employs a "double opt-in" mechanism, in which both users must match in order to send messages.
 
 """
-from posixpath import islink
 from Profile import Profile
 
 
@@ -73,7 +72,7 @@ class Match():
         return False
 
     def allowConnection(self):
-        if self.isConnect:
+        if self.isConnect or (self.profile1.isPremium and self.isLike):
             print("You can message now.")
             return True
         return False
