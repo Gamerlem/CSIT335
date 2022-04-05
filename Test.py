@@ -33,5 +33,5 @@ match1.allowConnection()
 
 
 
-# print(profile1.likeList)
-# print(profile2.likeList)
+print(profile1.rewindList)
+print(profile2.rewindList)
