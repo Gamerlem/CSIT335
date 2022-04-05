@@ -10,8 +10,6 @@ Users can like or dislike the profiles of other users.
 Findrr also employs a "double opt-in" mechanism, in which both users must match in order to send messages.
 
 """
-from posixpath import islink
-import profile
 from Profile import Profile
 
 class Match():

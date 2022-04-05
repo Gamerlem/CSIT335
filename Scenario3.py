@@ -22,7 +22,7 @@ class TestScenario3(unittest.TestCase):
 
     def test_isLikedProfile(self):
         c3 = self.match.isLikedProfile()
-        self.assertEqual(c3, False)
+        self.assertEqual(c3, True)
     
     def test_isLikeProfile(self):
         c4 = self.match.isLikeProfile()
@@ -34,7 +34,7 @@ class TestScenario3(unittest.TestCase):
     
     def test_act_addToMatchList(self):
         a2 = self.match.addToMatchList()
-        self.assertEqual(a2, False)
+        self.assertEqual(a2, True)
 
     def test_act_addToRewindList(self):
         a3 = self.match.addToRewindList()
@@ -42,7 +42,7 @@ class TestScenario3(unittest.TestCase):
 
     def test_act_notifyMatch(self):
         a4 = self.match.notifyMatch()
-        self.assertEqual(a4, False)
+        self.assertEqual(a4, True)
     
     def test_act_allowConnection(self):
         a5 = self.match.allowConnection()
