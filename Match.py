@@ -73,7 +73,7 @@ class Match():
     return False
 
   def allowConnection(self):
-    if self.isConnect:
+    if self.isConnect or (self.profile1.isPremium and self.isLike):
       print("You can message now.")
       return True
     return False
