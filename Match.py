@@ -16,8 +16,6 @@ class Match():
   profile1: Profile #main user
   profile2: Profile #secondary user
   isLike: bool = False
-  isMatch: bool = False
-  isConnect: bool = False
 
   def __init__(
       self,
@@ -28,6 +26,10 @@ class Match():
     self.profile1 = profile1
     self.profile2 = profile2
     self.isLike = isLike
+  
+  def _isMatch(self):
+    self.addToMatchList()
+    return (self.profile1.id in self.profile2.matchList) and (self.profile2.id in self.profile1.matchList)
   
   def checkValidAccounts(self):
     return self.profile1.isValid and self.profile2.isValid
@@ -53,8 +55,6 @@ class Match():
     if self.isLikedProfile() and self.isLikeProfile():
       self.profile1.addToMatchList(self.profile2.id)
       self.profile2.addToMatchList(self.profile1.id)
-      self.isMatch = True
-      self.isConnect = True
       return True
     return False 
   
@@ -65,13 +65,13 @@ class Match():
     return False
 
   def notifyMatch(self):
-    if self.isMatch:
+    if self._isMatch():
       print("It's a Match")
       return True
     return False
 
   def allowConnection(self):
-    if self.isConnect or (self.profile1.isPremium and self.isLike):
+    if self._isMatch() or (self.profile1.isPremium and self.isLike):
       print("You can message now.")
       return True
     return False
