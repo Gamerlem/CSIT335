@@ -38,7 +38,7 @@ class Match():
     def checkPremium(self):
         return self.profile1.isPremium and self.checkValidAccounts()
 
-       # check if other users like the main user
+    # check if other users like the main user
     def isLikedProfile(self):
         return self.profile1.id in self.profile2.likeList and self.checkValidAccounts()
 
