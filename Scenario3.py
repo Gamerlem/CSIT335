@@ -4,8 +4,8 @@ from Match import Match
 
 class TestScenario3(unittest.TestCase):
     def setUp(self) -> None:
-        profile1 = Profile(1, "Jc", 22, "Talisay", "Shemale", True)
-        profile2 = Profile(2, "Secret", 22, "Talisay", "Female", False)
+        profile1 = Profile(1, "Jc", 22, "Talisay", "Male", True)
+        profile2 = Profile(2, "Lora", 22, "Talisay", "Female", False)
         self.match = Match(profile1, profile2, True)
         return super().setUp()
     

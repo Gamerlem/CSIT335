@@ -5,8 +5,8 @@ from Match import Match
 
 class TestScenario5(unittest.TestCase):
     def setUp(self) -> None:
-        profile1 = Profile(1, "Jc", 22, "Talisay", "Shemale", False)
-        profile2 = Profile(2, "Secret", 22, "Talisay", "Female", False)
+        profile1 = Profile(1, "Jc", 22, "Talisay", "Male", False)
+        profile2 = Profile(2, "Lora", 22, "Talisay", "Female", False)
         # pre-condition: profile2 likes profile1
         profile2.addToLikeList(profile1.id)
         self.match = Match(profile1, profile2, True)      
