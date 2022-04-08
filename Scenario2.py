@@ -14,7 +14,7 @@ class TestScenario2(unittest.TestCase):
         second param : profile2 is Other User
         third param : isLike whether current user likes the other user
         """
-        self.match = Match(profile1 = profile1, profile2 = profile2, isLike = True)
+        self.match = Match(profile1 = profile1, profile2 = profile2, isLike = False)
         return super().setUp()
 
     def tearDown(self) -> None:
