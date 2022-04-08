@@ -4,7 +4,11 @@ from Match import Match
 
 class TestScenario9To16(unittest.TestCase):
     def setUp(self) -> None:
-        # setting up profile1 as an INVALID ACCOUNT by leaving one of the relevant parameters (name, address, gender) blank
+        """
+        setting up profile1 as an INVALID ACCOUNT by leaving one of the relevant parameters 
+        (name, address, gender) blank or having age input as less than 18
+        
+        """
         profile1 = Profile(id = 1, name = "", age = 22, address = "Talisay", gender = "Male", isPremium = False)
         profile2 = Profile(id = 2, name = "Lora", age = 22, address = "Talisay", gender = "Female", isPremium = False)
         # pre-condition: profile2 likes profile1
