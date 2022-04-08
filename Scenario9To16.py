@@ -4,8 +4,9 @@ from Match import Match
 
 class TestScenario9To16(unittest.TestCase):
     def setUp(self) -> None:
-        profile1 = Profile(1, "", 22, "Talisay", "Male", False)
-        profile2 = Profile(2, "Lora", 22, "Talisay", "Female", False)
+        # setting up profile1 as an INVALID ACCOUNT by leaving one of the relevant parameters (name, address, gender) blank
+        profile1 = Profile(id = 1, name = "", age = 22, address = "Talisay", gender = "Male", isPremium = False)
+        profile2 = Profile(id = 2, name = "Lora", age = 22, address = "Talisay", gender = "Female", isPremium = False)
         # pre-condition: profile2 likes profile1
         profile2.addToLikeList(profile1.id)
         """ 

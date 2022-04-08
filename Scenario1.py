@@ -4,8 +4,8 @@ from Match import Match
 
 class TestScenario1(unittest.TestCase):
     def setUp(self) -> None:
-        profile1 = Profile(1, "Jc", 22, "Talisay", "Male", True)
-        profile2 = Profile(2, "Lora", 22, "Talisay", "Female", False)
+        profile1 = Profile(id = 1, name = "Jc", age = 22, address = "Talisay", gender = "Male", isPremium = True)
+        profile2 = Profile(id = 2, name = "Lora", age = 22, address = "Talisay", gender = "Female", isPremium = False)
         # pre-condition: profile2 likes profile1
         profile2.addToLikeList(profile1.id)
         """ 
