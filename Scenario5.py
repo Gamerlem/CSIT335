@@ -2,14 +2,19 @@ import unittest
 from Profile import Profile
 from Match import Match
 
-
 class TestScenario5(unittest.TestCase):
     def setUp(self) -> None:
         profile1 = Profile(1, "Jc", 22, "Talisay", "Male", False)
         profile2 = Profile(2, "Lora", 22, "Talisay", "Female", False)
         # pre-condition: profile2 likes profile1
         profile2.addToLikeList(profile1.id)
-        self.match = Match(profile1, profile2, True)      
+        """ 
+        Match parameters
+        first param : profile1 is Current User
+        second param : profile2 is Other User
+        third param : isLike whether current user likes the other user
+        """
+        self.match = Match(profile1 = profile1, profile2 = profile2, isLike = True)    
         return super().setUp()
 
     def tearDown(self) -> None:
