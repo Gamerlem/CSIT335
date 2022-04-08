@@ -29,8 +29,7 @@ class Match():
         self.isLike = isLike
 
     def _isMatch(self):
-        self.addToMatchList()
-        return (self.profile1.id in self.profile2.matchList) and (self.profile2.id in self.profile1.matchList)
+        return self.addToMatchList()
 
     def checkValidAccounts(self):
         return self.profile1.isValid and self.profile2.isValid
